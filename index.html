@@ -31,6 +31,7 @@
 <body class="gradient-background">
   <div class="flex items-center justify-center h-screen">
     <div class="flex flex-col items-center p-4">
+      <h2 id="recipientHeader" class="text-4xl font-bold italic text-[#bd1e59] my-4">To Meli,</h2>
       <img id="imageDisplay" src="./images/image1.gif" alt="Cute kitten with flowers" class="rounded-md h-[300px]" style="object-fit: cover;" />
       <h2 id="valentineQuestion" class="text-4xl font-bold italic text-[#bd1e59] my-4">Will you paw-lease be my Valentine? 🥰</h2>
       <div class="flex gap-4 pt-[20px] items-center" id="responseButtons">
@@ -52,6 +53,7 @@
     const noButton = document.getElementById('noButton');
     const imageDisplay = document.getElementById('imageDisplay');
     const valentineQuestion = document.getElementById('valentineQuestion');
+    const recipientHeader = document.getElementById('recipientHeader');
     const responseButtons = document.getElementById('responseButtons');
   
     let noClickCount = 0;
@@ -86,7 +88,8 @@
   
     yesButton.addEventListener('click', () => {
       imageDisplay.src = './images/image7.gif'; // Change to image7.gif
-      valentineQuestion.textContent = "Yayyy!! ily bebi mwa 😚"; // Change the question text
+      recipientHeader.textContent = "Yayyy!! i 'woof' you bebi 😚"; // Change the header
+      valentineQuestion.textContent = "See you later!! 🫶"; // Change the question text
       responseButtons.style.display = 'none'; // Hide both buttons
       confetti(); // Trigger confetti animation
     });
